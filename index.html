@@ -106,7 +106,7 @@ iMaster Enterprise - Debt Collection
 }
 
 .numbered-dash-item-main-table td a {
-  color: #007bff;
+  color: #00000;
   font-weight: bold;
   text-decoration: none;
 }
@@ -158,7 +158,7 @@ iMaster Enterprise - Debt Collection
             .theme-red      { background-color: #EF4444; } /* Red */
             .theme-pink      {background-color: rgb(190, 21, 190);} /* Pink */
             .theme-darkgreen {background-color: #005000;} /* darkgreen */
-            .theme-palevioletred {background-color: palevioletred;} /* palevioletred */
+            .theme-palevioletred {background-color: rgb(212, 62, 112);} /* palevioletred */
             
             /* Number and name text styles */
             .the-number {
@@ -198,140 +198,41 @@ iMaster Enterprise - Debt Collection
   }
 }
 
-    </style>
+.numbered-dash-item-main-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
 
-    <!-- <style>
-        /* DASHBOARD CONTAINER LAYOUT */
-        .dashboard-main-container {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 20px;
-          padding: 20px;
-          justify-content: space-between;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        /* MAIN BLOCK THAT HOLDS GROUPS OF CARDS */
-        .numbered-dash-item-main {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 20px;
-          padding: 10px;
-        }
-        
-        /* EACH INDIVIDUAL CARD */
-        .numbered-dash-item {
-          flex: 1 1 160px;
-          background: linear-gradient(135deg, #f9fafb, #e2e8f0);
-          border-radius: 12px;
-          box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-          padding: 20px 15px;
-          text-align: center;
-          transition: all 0.25s ease-in-out;
-          min-width: 150px;
-          position: relative;
-          overflow: hidden;
-        }
-        
-        .numbered-dash-item:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        /* NUMBER TEXT */
-        .the-number {
-          font-size: 32px;
-          font-weight: 700;
-          margin-bottom: 8px;
-          line-height: 1.2;
-        }
-        
-        .the-number.smaller-font {
-          font-size: 26px;
-        }
-        
-        /* NAME/DESCRIPTION TEXT */
-        .the-name {
-          font-size: 15px;
-          font-weight: 600;
-          color: #374151;
-        }
-        
-        /* COLOR THEMES — USE CLASSES INSTEAD OF INLINE STYLES (cleaner) */
-        .numbered-dash-item.theme-blue {
-          background: linear-gradient(135deg, #dbeafe, #60a5fa);
-          color: #1e3a8a;
-        }
-        .numbered-dash-item.theme-green {
-          background: linear-gradient(135deg, #d1fae5, #34d399);
-          color: #065f46;
-        }
-        .numbered-dash-item.theme-purple {
-          background: linear-gradient(135deg, #ede9fe, #a78bfa);
-          color: #4c1d95;
-        }
-        .numbered-dash-item.theme-red {
-          background: linear-gradient(135deg, #fee2e2, #f87171);
-          color: #7f1d1d;
-        }
-        .numbered-dash-item.theme-darkblue {
-          background: linear-gradient(135deg, #e0e7ff, #6366f1);
-          color: #1e1b4b;
-        }
-        
-        /* RIGHT PANEL TABLE */
-        .numbered-dash-item-main-table {
-          width: 100%;
-          border-collapse: collapse;
-          background: #fff;
-          border-radius: 12px;
-          box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-          overflow: hidden;
-          font-size: 14px;
-        }
-        
-        .numbered-dash-item-main-table th,
-        .numbered-dash-item-main-table td {
-          padding: 12px 14px;
-          text-align: left;
-        }
-        
-        .numbered-dash-item-main-table th {
-          background-color: #f3f4f6;
-          font-weight: 700;
-          font-size: 15px;
-          color: #111827;
-        }
-        
-        .numbered-dash-item-main-table td a {
-          color: #2563eb;
-          font-weight: bold;
-          text-decoration: none;
-        }
-        
-        .numbered-dash-item-main-table td a:hover {
-          text-decoration: underline;
-        }
-        
-        /* RESPONSIVENESS */
-        @media screen and (max-width: 768px) {
-          .numbered-dash-item {
-            flex: 1 1 100%;
-          }
-          .numbered-dash-item-main {
-            justify-content: center;
-          }
-          .dashboard-main-container {
-            flex-direction: column;
-            align-items: center;
-          }
-        }
-        </style> -->
-        
-            
+.numbered-dash-item-main-table th,
+.numbered-dash-item-main-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.numbered-dash-item-main-table tr {
+  border-bottom: 1px solid #ddd; /* Light gray line */
+}
+
+.numbered-dash-item-main-table tr:last-child {
+  border-bottom: none; /* Removes border from the last row */
+}
+
+.heading1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    color: #2c3e50; /* A strong professional dark-blue */
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+    </style>
     
     <!--/ Scripts Libraries -->
-
     
     <link rel="stylesheet" type="text/css" href="/assets/custom/css/hcharts.css" />
 </head>
@@ -382,329 +283,6 @@ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side frame
 Sys.WebForms.PageRequestManager._initialize('ctl00$ctl13', 'ctl12', [], [], [], 90, 'ctl00');
 //]]>
 </script>
-
-        <!--  Header -->
-        <!-- navbar-fixed-top-->
-        <nav class="header-navbar_main header-navbar_top navbar navbar-with-menu navbar-fixed-top navbar-light navbar-border navbar-brand-center" >
-            <div class="header-navbar_bg" sstyle="border: solid 1px red">
-                <div class="header-navbar_narrow " sstyle="border: solid 1px black">
-                    <div class="application_name" ><img src="images/logo-pia.png" height="30" style="float: left; padding-right: 10px"/>
-                        <div style="float: left" class="application_name_links">
-                            <a href="/" class="">iMaster - Debt Collection - Live</a> &nbsp; | &nbsp; <a href="/" class="hidden">About iMaster - Debt Collection </a><a href="mailto:info@maulex.com" class="">Report a Problem</a> &nbsp; 
-                        </div>
-                        <div class="input-group header-navbar_search_panel"  style="float: right; display: none">
-                            <input name="ctl00$search_txt" type="text" id="search_txt" class="form-control" placeholder="Search contractor or contract" style="width:270px;height: 30px;" />
-                                <button id="search_btn" cssclass="btn btn-default" style="height: 30px;"><span class="fa fa-search"/></button>
-                        </div>
-                    </div>
-                    <div class="signup-bar">
-                        <div id="navbar-mobile" >
-                            
-                            <div id="dv_identity" class="">
-                                Welcome 
-                                <span id="lbl_UserID" class="">Trixie</span><span id="lbl_Org" class="">, PHILLIPS INTERNATIONAL AUCTIONEERS</span>
-                                | <a href="login.aspx?action=logout">Sign Out</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- navigation bar -->
-        <div id="home_menus_dv" role="navigation" data-menu="menu-wrapper" class="menu_bar">
-            <!-- Horizontal menu content-->
-            <div data-menu="menu-container"  class="header-navbar_menus navbar-container main-menu-content scontainer center-layout">
-                <!-- include ../../../includes/mixins-->
-                <ul id="main-menu-navigation" data-menu="menu-navigation" class="nav navbar-nav">
-                    <li id="home_li" data-menu="dropdown" class="navigation-main-menu dropdown nav-item">
-                        <a href="/" class="nav-link ">
-                            <span data-i18n="nav.dash.main">Home</span>
-                        </a>
-                        <ul  >
-                            
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="main_menu_a_dv" role="navigation" data-menu="menu-wrapper" class="menu_bar">
-            <!-- Horizontal menu content-->
-            <div data-menu="menu-container"  class="header-navbar_menus navbar-container main-menu-content scontainer center-layout">
-                <!-- include ../../../includes/mixins-->
-                <ul id="main-menu-navigation" data-menu="menu-navigation" class="nav navbar-nav">
-                    <li id="customers_li" data-menu="dropdown" class="navigation-main-menu dropdown nav-item">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">
-                            <span data-i18n="/">Clients <b class=" fa fa-angle-down"></b></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=3001" data-toggle="dropdown" class="dropdown-item">
-                                   All Clients
-                                </a>
-                            </li>
-                            
-                        </ul>
-                    </li>
-                    <li id="items_li" data-menu="dropdown" class="navigation-main-menu dropdown nav-item">
-                        <a href="#" id="href_myrofile" class="nav-link ">
-                            <span data-i18n="nav.dash.main">Borrowers<b class=" fa fa-angle-down"></b></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li id="items_grp_li" data-menu="">
-                                <a href="/dp.aspx?page_id=23001" id="my_borrowers_li" data-toggle="dropdown" class="dropdown-item">
-                                  My Borrowers
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23052" data-toggle="dropdown" class="dropdown-item">
-                                   My Promises To Pay Due for Review Today
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23053" data-toggle="dropdown" class="dropdown-item">
-                                   My Promises To Pay Due for Payment Today
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23054" data-toggle="dropdown" class="dropdown-item">
-                                   All My PTPs and Reviews
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23064" data-toggle="dropdown" class="dropdown-item">
-                                   Non-Activities
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23063" data-toggle="dropdown" class="dropdown-item">
-                                   Non-Activities for New Files
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23022" data-toggle="dropdown" class="dropdown-item">
-                                   Scheduled Payment Reminders for Today
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23023" data-toggle="dropdown" class="dropdown-item">
-                                   All Scheduled Payment Reminders
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23106" data-toggle="dropdown" class="dropdown-item">
-                                   My Alerts Sent Today
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23107" data-toggle="dropdown" class="dropdown-item">
-                                   All My Alerts
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23108" data-toggle="dropdown" class="dropdown-item">
-                                   All My Notes
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23109" data-toggle="dropdown" class="dropdown-item">
-                                   All My Payment Plans
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23110" data-toggle="dropdown" class="dropdown-item">
-                                   All My Payments
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23065" data-toggle="dropdown" class="dropdown-item">
-                                   My Future Tasks
-                                </a> 
-                            </li>
-                            
-                        </ul>
-                    </li>
-                    
-                    
-                    
-                    <li id="reports_li" data-menu="dropdown" class="navigation-main-menu dropdown nav-item">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">
-                            <span data-i18n="/">Reports <b class=" fa fa-angle-down"></b></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li data-menu="">
-                                <a href="/cal.aspx" data-toggle="dropdown" class="dropdown-item">
-                                    Calendar
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dashboard.aspx" data-toggle="dropdown" class="dropdown-item">
-                                    Dashboard
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23111" data-toggle="dropdown" class="dropdown-item">
-                                    All Collections
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23001" data-toggle="dropdown" class="dropdown-item">
-                                   All Borrowers
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23101" data-toggle="dropdown" class="dropdown-item">
-                                   Borrowers with Balances
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23121" data-toggle="dropdown" class="dropdown-item">
-                                   Borrowers with Multiple Clients
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23001" data-toggle="dropdown" class="dropdown-item">
-                                   Collection Officer Workload
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23105" data-toggle="dropdown" class="dropdown-item">
-                                   Alerts
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=23141" data-toggle="dropdown" class="dropdown-item">
-                                   Progress Report - By Client
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li id="financials_li" data-menu="dropdown" class="navigation-main-menu dropdown nav-item">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">
-                            <span data-i18n="/">Finance<b class=" fa fa-angle-down"></b></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li data-menu="" >
-                                <a href="/dp.aspx?page_id=23211" data-toggle="dropdown" class="dropdown-item">
-                                    Collection Confirmations
-                                </a>
-                            </li>
-                            
-                        </ul>
-                    </li>
-                     
-                    <li id="admin_li" data-menu="dropdown" class="navigation-main-menu dropdown nav-item">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link">
-                            <span data-i18n="/">Administration <b class=" fa fa-angle-down"></b></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li id="groups_li" data-menu="">
-                                <a href="/dp.aspx?page_id=2" data-toggle="dropdown" class="dropdown-item">
-                                  Groups
-                                </a>
-                            </li>
-                            <li id="users_li" data-menu="">
-                                <a href="/dp.aspx?page_id=1" data-toggle="dropdown" class="dropdown-item">
-                                  Users
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <hr>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=700031" data-toggle="dropdown" class="dropdown-item">
-                                  Borrower Reasons for Default
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=700011" data-toggle="dropdown" class="dropdown-item">
-                                  Borrower Conversation Types
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=700012" data-toggle="dropdown" class="dropdown-item">
-                                  Borrower Conversation Recommendations
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=700014" data-toggle="dropdown" class="dropdown-item">
-                                  Redemption Notice Types
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=700015" data-toggle="dropdown" class="dropdown-item">
-                                  Payment Recurrence/Frequency
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=700017" data-toggle="dropdown" class="dropdown-item">
-                                  Current Borrower Status
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=700018" data-toggle="dropdown" class="dropdown-item">
-                                  Borrower Contacted Parties
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=700019" data-toggle="dropdown" class="dropdown-item">
-                                  Types of Loan
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <hr>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=700021" data-toggle="dropdown" class="dropdown-item">
-                                  Types of Alert Messages
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <hr>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.clients.importborrowers.aspx" data-toggle="dropdown" class="dropdown-item">
-                                  Import Clients
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <hr>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=700000" data-toggle="dropdown" class="dropdown-item">
-                                  General Settings
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=80001" data-toggle="dropdown" class="dropdown-item">
-                                  Company Details
-                                </a>
-                            </li>
-                            <li data-menu="">
-                                <hr>
-                            </li>
-                            <li data-menu="">
-                                <a href="/dp.aspx?page_id=4" data-toggle="dropdown" class="dropdown-item">
-                                  Audit Trail
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /horizontal menu content-->
-        </div>					
-        <div id="guest_dv" role="navigation" data-menu="menu-wrapper" class="menu_bar">
-            <!-- Horizontal menu content-->
-            <div data-menu="menu-container"  class="header-navbar_menus navbar-container main-menu-content scontainer center-layout">
-                <!-- include ../../../includes/mixins-->
-                <ul id="main-menu-navigation" data-menu="menu-navigation" class="nav navbar-nav">
-                    <li id="feedback_li" class="navigation-main-menu nav-item">
-                    </li>
-                </ul>
-            </div>
-        </div>
-        </nav>
         <!-- ////////////////////////////////////////////////////////////////////////////-->
         <!-- Horizontal navigation-->
 
@@ -716,12 +294,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl13', 'ctl12', [], [], [], 
                 <div class="content-body container">
                     <div class="row container-nugget">
                         
-                        
-                        
-                        
-                        
-
-                        
     <div class="app-content container center-layout mt-2">
         <div class=" ">
             <div class=" container">
@@ -731,20 +303,20 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl13', 'ctl12', [], [], [], 
                         <div id="kick-start" class="card">
                             <div class="card-header">
                                 <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
-                                <div class="heading-elements">
+                                <!-- <div class="heading-elements">
                                     <ul class="list-inline mb-0">
                                         <li><a data-action="collapse"><i class="icon-minus4"></i></a></li>
                                         <li><a data-action="reload"><i class="icon-reload"></i></a></li>
                                         <li><a data-action="close"><i class="icon-cross2"></i></a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
 
 
                             <div class="card-body collapse in">
                                 <div class="card-block  ">
                                     <div class="row" style="swidth: 90%" >
-                                        <h1>Welcome to the Debt Collection System</h1>
+                                        <h1 class="heading1">Welcome to the Debt Collection System</h1>
                                         
                                     </div>
                                     <div class="row" style="swidth: 90%" >
@@ -769,7 +341,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl13', 'ctl12', [], [], [], 
         </a>
     
         <a href="dp.aspx?page_id=23053" class="nav-link">
-        <div class="numbered-dash-item theme-green">
+        <div class="numbered-dash-item theme-pink">
             <div class='the-number ' style="color: white;">
                 0
             </div>
@@ -780,7 +352,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl13', 'ctl12', [], [], [], 
         </a>
     
         <a href="dp.aspx?page_id=23109" class="nav-link">
-        <div class="numbered-dash-item theme-palevioletred">
+        <div class="numbered-dash-item theme-green">
             <div class='the-number ' style="color: #ffffff;">
                 0
             </div>
@@ -813,7 +385,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl13', 'ctl12', [], [], [], 
         </a>
     
         <a href="dp.aspx?page_id=23001" class="nav-link">
-        <div class="numbered-dash-item theme-indigo">
+        <div class="numbered-dash-item theme-yellow">
             <div class='the-number ' style="color: #ffffff;">
                 5,041
             </div>
@@ -824,7 +396,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl13', 'ctl12', [], [], [], 
         </a>
     
         <a href="dp.aspx?page_id=23063" class="nav-link">
-        <div class="numbered-dash-item theme-yellow">
+        <div class="numbered-dash-item theme-palevioletred">
             <div class='the-number ' style="color: #ffffff;">
                 392
             </div>
@@ -835,7 +407,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl13', 'ctl12', [], [], [], 
         </a>
     
         <a href="dp.aspx?page_id=23064" class="nav-link">
-        <div class="numbered-dash-item theme-red">
+        <div class="numbered-dash-item theme-indigo">
             <div class='the-number ' style="color: #ffffff;">
                 5,010
             </div>
@@ -846,7 +418,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl13', 'ctl12', [], [], [], 
         </a>
     
         <a href="dp.aspx?page_id=23065" class="nav-link">
-        <div class="numbered-dash-item theme-pink">
+        <div class="numbered-dash-item theme-red">
             <div class='the-number smaller-font' style="color: white;">
                 9
             </div>
@@ -871,17 +443,17 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl13', 'ctl12', [], [], [], 
     
         <tr>
             <td class="col1" sstyle="color: #005000;">SMS Sent Today</td>
-            <td class="col2" sstyle="color: green"><a href="dp.aspx?page_id=23106">1</a></td>	
+            <td class="col2" sstyle="color: green"><a href="dp.aspx?page_id=23106" class="nav-link">1</a></td>	
         </tr>			
     
         <tr>
             <td class="col1" sstyle="color: #005000;">Promise(s) to Pay Due Today</td>
-            <td class="col2" sstyle="color: green"><a href="dp.aspx?page_id=23053">2</a></td>	
+            <td class="col2" sstyle="color: green"><a href="dp.aspx?page_id=23053" class="nav-link">2</a></td>	
         </tr>			
     
         <tr>
             <td class="col1" sstyle="color: #452778;">Payment Plan(s)</td>
-            <td class="col2" sstyle="color: #673ab7"><a href="dp.aspx?page_id=23109">0</a></td>	
+            <td class="col2" sstyle="color: #673ab7"><a href="dp.aspx?page_id=23109" class="nav-link">0</a></td>	
         </tr>			
     
     </table>
